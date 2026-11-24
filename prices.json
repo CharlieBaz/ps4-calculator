@@ -1,0 +1,35 @@
+{
+  "last_updated": null,
+  "source": "Starting estimates (not yet updated from eBay)",
+  "consoles": {
+    "orig_500": { "label": "Original 500GB", "price": 70, "listings": null, "updated": null },
+    "orig_1tb": { "label": "Original 1TB", "price": 80, "listings": null, "updated": null },
+    "slim_500": { "label": "Slim 500GB", "price": 90, "listings": null, "updated": null },
+    "slim_1tb": { "label": "Slim 1TB", "price": 105, "listings": null, "updated": null },
+    "pro_1tb": { "label": "Pro 1TB", "price": 150, "listings": null, "updated": null }
+  },
+  "parts": {
+    "hdd_500": { "label": "2.5\" 500GB hard drive", "price": 12, "listings": null, "updated": null },
+    "hdd_1tb": { "label": "2.5\" 1TB hard drive", "price": 25, "listings": null, "updated": null },
+    "firmware": { "label": "Firmware reinstall (free download)", "price": 0, "listings": null, "updated": null },
+    "psu_orig": { "label": "Power supply (Original)", "price": 20, "listings": null, "updated": null },
+    "psu_slim": { "label": "Power supply (Slim)", "price": 18, "listings": null, "updated": null },
+    "psu_pro": { "label": "Power supply (Pro)", "price": 28, "listings": null, "updated": null },
+    "fan_orig": { "label": "Fan (Original)", "price": 9, "listings": null, "updated": null },
+    "fan_slim": { "label": "Fan (Slim)", "price": 9, "listings": null, "updated": null },
+    "fan_pro": { "label": "Fan (Pro)", "price": 12, "listings": null, "updated": null },
+    "thermal_paste": { "label": "Thermal paste", "price": 6, "listings": null, "updated": null },
+    "drive_orig": { "label": "Disc drive mechanism (Original)", "price": 20, "listings": null, "updated": null },
+    "drive_slim": { "label": "Disc drive mechanism (Slim)", "price": 22, "listings": null, "updated": null },
+    "drive_pro": { "label": "Disc drive mechanism (Pro)", "price": 25, "listings": null, "updated": null },
+    "controller": { "label": "Third-party controller", "price": 15, "listings": null, "updated": null },
+    "cables": { "label": "Power + HDMI cables", "price": 7, "listings": null, "updated": null },
+    "shell_orig": { "label": "Shell (Original)", "price": 15, "listings": null, "updated": null },
+    "shell_slim": { "label": "Shell (Slim)", "price": 18, "listings": null, "updated": null },
+    "shell_pro": { "label": "Shell (Pro)", "price": 25, "listings": null, "updated": null }
+  },
+  "settings": {
+    "ebay_postage": 10,
+    "cex_rate_percent": 60
+  }
+}

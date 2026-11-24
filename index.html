@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>PS4 Flip Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>PS4 Flip Calculator</h1>
+    <p id="price-status" class="muted">Loading prices…</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Console</h2>
+      <label>Model
+        <select id="model"></select>
+      </label>
+      <div class="row">
+        <label>Buy price (£)
+          <input id="buy" type="number" inputmode="decimal" min="0" step="1" value="0">
+        </label>
+        <label>Sale price when working (£)
+          <input id="sale" type="number" inputmode="decimal" min="0" step="1" data-price>
+          <small id="sale-source" class="muted"></small>
+        </label>
+      </div>
+      <label>Sales channel
+        <select id="channel">
+          <option value="local">Local cash (Facebook / Gumtree)</option>
+          <option value="ebay">eBay (posted)</option>
+          <option value="cex">CeX cash trade-in</option>
+        </select>
+      </label>
+      <label id="postage-wrap" hidden>eBay postage cost (£)
+        <input id="postage" type="number" inputmode="decimal" min="0" step="0.5" data-price>
+      </label>
+      <label id="cex-wrap" hidden>CeX cash offer (% of private sale price)
+        <input id="cex-rate" type="number" inputmode="decimal" min="0" max="100" step="1" data-price>
+      </label>
+    </section>
+
+    <section class="card">
+      <h2>Faults</h2>
+      <p class="muted small">Tick what's wrong. Part costs are editable.</p>
+      <div id="faults"></div>
+    </section>
+
+    <section class="card">
+      <h2>Time &amp; buffer</h2>
+      <div class="row">
+        <label>Hours spent
+          <input id="hours" type="number" inputmode="decimal" min="0" step="0.5" value="0">
+        </label>
+        <label>Your time (£/hour)
+          <input id="rate" type="number" inputmode="decimal" min="0" step="1" value="0">
+        </label>
+      </div>
+      <label>Contingency on parts: <strong id="contingency-out">10%</strong>
+        <input id="contingency" type="range" min="0" max="30" step="1" value="10">
+      </label>
+    </section>
+
+    <section class="card" id="results">
+      <h2>Result</h2>
+      <div id="solder-warning" class="warning" hidden></div>
+      <dl class="results">
+        <dt>Buy price</dt><dd id="r-buy"></dd>
+        <dt>Parts</dt><dd id="r-parts"></dd>
+        <dt>Contingency</dt><dd id="r-contingency"></dd>
+        <dt>Postage</dt><dd id="r-postage"></dd>
+        <dt>Your time</dt><dd id="r-labour"></dd>
+        <dt class="total">Total cost</dt><dd class="total" id="r-cost"></dd>
+        <dt class="total">Money back</dt><dd class="total" id="r-back"></dd>
+        <dt class="big">Profit</dt><dd class="big" id="r-profit"></dd>
+        <dt>Return on cost</dt><dd id="r-roi"></dd>
+      </dl>
+      <hr>
+      <label>Target profit (£)
+        <input id="target" type="number" inputmode="decimal" min="0" step="5" value="30">
+      </label>
+      <p class="maxpay">Max I should pay: <strong id="r-maxpay"></strong></p>
+      <button id="save-deal" class="primary">Save this deal to log</button>
+    </section>
+
+    <section class="card">
+      <h2>Deal log</h2>
+      <div id="log-summary"></div>
+      <div id="log-list"></div>
+      <button id="export-csv">Export CSV</button>
+    </section>
+
+    <section class="card">
+      <h2>Prices</h2>
+      <p class="muted small">
+        Live prices are eBay UK <strong>asking</strong> prices (median of current listings), not sold prices.
+        Any price you edit is saved on this device.
+      </p>
+      <p id="override-count" class="small"></p>
+      <button id="reset-prices">Reset to live prices</button>
+    </section>
+  </main>
+
+  <div id="sticky" class="sticky">
+    <span>Profit <strong id="s-profit"></strong></span>
+    <span>Max pay <strong id="s-maxpay"></strong></span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

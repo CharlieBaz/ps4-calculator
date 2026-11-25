@@ -115,15 +115,16 @@ ITEMS = {
         part("arctic mx-4 thermal paste 4g", 2, 20, require=[r"thermal|paste|compound"],
              exclude=[r"\bpad\b|pads|\blot\b|x\s?[2-9]\b"], condition="conditionIds:{1000}")]},
 
+    # Slim and Pro use the same drive mechanism (KEM-496), so listings for "Slim/Pro" count for both.
     "drive_orig": {"group": "parts", "searches": [
-        part("ps4 blu ray disc drive mechanism kem-490", 5, 60, require=[r"\bps4\b|playstation|kem-?490"],
-             exclude=[ORIG_ONLY["exclude"], r"kem-?496|faceplate|gear|motor only|ribbon|cable|screw|\bboard only\b"])]},
+        part("ps4 blu ray drive", 5, 60, require=[r"\bps4\b|playstation|kem-?490", r"drive|kem-?490|mechanism"],
+             exclude=[ORIG_ONLY["exclude"], r"kem-?496", r"faceplate|gear|motor only|ribbon|cable|screw|\bboard only\b|external|usb|\bcover\b"])]},
     "drive_slim": {"group": "parts", "searches": [
-        part("ps4 slim blu ray disc drive mechanism kem-496", 5, 60, require=[SLIM["require"]],
-             exclude=[SLIM["exclude"], r"faceplate|gear|motor only|ribbon|cable|screw|\bboard only\b"])]},
+        part("ps4 slim blu ray drive", 5, 60, require=[r"\bslim\b|kem-?496", r"drive|kem-?496|mechanism"],
+             exclude=[r"faceplate|gear|motor only|ribbon|cable|screw|\bboard only\b|external|usb|\bcover\b"])]},
     "drive_pro": {"group": "parts", "searches": [
-        part("ps4 pro blu ray disc drive mechanism kem-496", 5, 70, require=[PRO["require"]],
-             exclude=[PRO["exclude"], r"faceplate|gear|motor only|ribbon|cable|screw|\bboard only\b"])]},
+        part("ps4 pro blu ray drive", 5, 70, require=[r"\bpro\b|kem-?496", r"drive|kem-?496|mechanism"],
+             exclude=[r"faceplate|gear|motor only|ribbon|cable|screw|\bboard only\b|external|usb|\bcover\b"])]},
 
     "controller": {"group": "parts", "searches": [
         part("wireless controller for ps4", 6, 40, require=[r"controller|gamepad"],
@@ -139,14 +140,14 @@ ITEMS = {
     ]},
 
     "shell_orig": {"group": "parts", "searches": [
-        part("ps4 replacement housing shell case", 5, 50, require=[r"\bps4\b|playstation", r"shell|housing"],
-             exclude=[ORIG_ONLY["exclude"], r"controller|skin|sticker|dust|bag|stand"])]},
+        part("ps4 shell housing", 5, 50, require=[r"\bps4\b|playstation", r"shell|housing|case"],
+             exclude=[ORIG_ONLY["exclude"], r"controller|skin|sticker|dust|bag|stand|faceplate only|screws? only"])]},
     "shell_slim": {"group": "parts", "searches": [
-        part("ps4 slim replacement housing shell case", 5, 50, require=[SLIM["require"], r"shell|housing"],
-             exclude=[SLIM["exclude"], r"controller|skin|sticker|dust|bag|stand"])]},
+        part("ps4 slim shell housing", 5, 50, require=[SLIM["require"], r"shell|housing|case"],
+             exclude=[SLIM["exclude"], r"controller|skin|sticker|dust|bag|stand|faceplate only|screws? only"])]},
     "shell_pro": {"group": "parts", "searches": [
-        part("ps4 pro replacement housing shell case", 5, 60, require=[PRO["require"], r"shell|housing"],
-             exclude=[PRO["exclude"], r"controller|skin|sticker|dust|bag|stand"])]},
+        part("ps4 pro shell housing", 5, 60, require=[PRO["require"], r"shell|housing|case"],
+             exclude=[PRO["exclude"], r"controller|skin|sticker|dust|bag|stand|faceplate only|screws? only"])]},
 }
 
 
@@ -207,17 +208,24 @@ def good_prices(items, s):
                 price += float(ship or 0)
         except (KeyError, ValueError, TypeError):
             continue
-        prices.append(price)
+        prices.append((price, it.get("title", "")))
     return remove_outliers(prices)
 
 
-def remove_outliers(prices):
+def remove_outliers(listings):
     """Drop anything far outside the middle half of prices (the 1.5 x IQR rule)."""
-    if len(prices) < 4:
-        return prices
-    q1, _, q3 = statistics.quantiles(prices, n=4)
+    if len(listings) < 4:
+        return listings
+    q1, _, q3 = statistics.quantiles([p for p, _ in listings], n=4)
     spread = q3 - q1
-    return [p for p in prices if q1 - 1.5 * spread <= p <= q3 + 1.5 * spread]
+    return [(p, t) for p, t in listings if q1 - 1.5 * spread <= p <= q3 + 1.5 * spread]
+
+
+def show_examples(listings):
+    """Print the cheapest, middle and dearest listings counted, so filters can be checked."""
+    ordered = sorted(listings)
+    for p, t in {0: ordered[0], 1: ordered[len(ordered) // 2], 2: ordered[-1]}.values():
+        print(f"       £{p:>6.2f}  {t[:80]}")
 
 
 def main():
@@ -238,13 +246,14 @@ def main():
             print(f"SKIP {key}: not in prices.json")
             continue
         try:
-            total, counts = 0.0, []
+            total, counts, found = 0.0, [], []
             for s in item["searches"]:
-                prices = good_prices(search(token, s), s)
-                if len(prices) < MIN_LISTINGS:
-                    raise ValueError(f"only {len(prices)} usable listings for '{s['q']}'")
-                total += statistics.median(prices)
-                counts.append(len(prices))
+                listings = good_prices(search(token, s), s)
+                if len(listings) < MIN_LISTINGS:
+                    raise ValueError(f"only {len(listings)} usable listings for '{s['q']}'")
+                total += statistics.median(p for p, _ in listings)
+                counts.append(len(listings))
+                found.append(listings)
         except Exception as e:  # keep the old price for this item
             print(f"KEEP {key}: {e} (staying at £{entry['price']})")
             continue
@@ -253,6 +262,8 @@ def main():
         entry["updated"] = today
         updated += 1
         print(f"OK   {key}: £{entry['price']} from {entry['listings']} listings")
+        for listings in found:
+            show_examples(listings)
 
     if updated == 0:
         sys.exit("Nothing could be updated, so prices.json was left as it was.")

@@ -17,6 +17,7 @@ import os
 import re
 import statistics
 import sys
+import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import date
@@ -159,8 +160,14 @@ def get_token(client_id, client_secret):
         "Authorization": f"Basic {creds}",
         "Content-Type": "application/x-www-form-urlencoded",
     })
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return json.load(r)["access_token"]
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return json.load(r)["access_token"]
+    except urllib.error.HTTPError as e:
+        reason = e.read().decode(errors="replace")[:300]
+        sys.exit(f"eBay refused the keys (HTTP {e.code}): {reason}\n"
+                 "Check the GitHub Secrets hold the PRODUCTION App ID and Cert ID, "
+                 "and that the Production keyset is enabled on developer.ebay.com.")
 
 
 def search(token, s):
@@ -214,8 +221,9 @@ def remove_outliers(prices):
 
 
 def main():
-    client_id = os.environ.get("EBAY_CLIENT_ID")
-    client_secret = os.environ.get("EBAY_CLIENT_SECRET")
+    # strip() removes stray spaces/newlines picked up when pasting the secrets
+    client_id = os.environ.get("EBAY_CLIENT_ID", "").strip()
+    client_secret = os.environ.get("EBAY_CLIENT_SECRET", "").strip()
     if not client_id or not client_secret:
         sys.exit("EBAY_CLIENT_ID / EBAY_CLIENT_SECRET are not set. Add them as GitHub Secrets.")
 

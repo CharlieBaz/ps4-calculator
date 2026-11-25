@@ -5,45 +5,45 @@
     "orig_500": {
       "label": "Original 500GB",
       "price": 75,
-      "listings": 68,
+      "listings": 63,
       "updated": "2026-11-25"
     },
     "orig_1tb": {
       "label": "Original 1TB",
       "price": 105,
-      "listings": 41,
+      "listings": 33,
       "updated": "2026-11-25"
     },
     "slim_500": {
       "label": "Slim 500GB",
       "price": 100,
-      "listings": 119,
+      "listings": 108,
       "updated": "2026-11-25"
     },
     "slim_1tb": {
       "label": "Slim 1TB",
-      "price": 141,
-      "listings": 86,
+      "price": 144,
+      "listings": 76,
       "updated": "2026-11-25"
     },
     "pro_1tb": {
       "label": "Pro 1TB",
-      "price": 162,
-      "listings": 107,
+      "price": 157,
+      "listings": 95,
       "updated": "2026-11-25"
     }
   },
   "parts": {
     "hdd_500": {
       "label": "2.5\" 500GB hard drive",
-      "price": 17,
-      "listings": 165,
+      "price": 16,
+      "listings": 152,
       "updated": "2026-11-25"
     },
     "hdd_1tb": {
       "label": "2.5\" 1TB hard drive",
       "price": 30,
-      "listings": 145,
+      "listings": 123,
       "updated": "2026-11-25"
     },
     "firmware": {
@@ -55,13 +55,13 @@
     "psu_orig": {
       "label": "Power supply (Original)",
       "price": 32,
-      "listings": 45,
+      "listings": 42,
       "updated": "2026-11-25"
     },
     "psu_slim": {
       "label": "Power supply (Slim)",
-      "price": 38,
-      "listings": 21,
+      "price": 37,
+      "listings": 18,
       "updated": "2026-11-25"
     },
     "psu_pro": {
@@ -73,7 +73,7 @@
     "fan_orig": {
       "label": "Fan (Original)",
       "price": 15,
-      "listings": 24,
+      "listings": 20,
       "updated": "2026-11-25"
     },
     "fan_slim": {
@@ -91,13 +91,13 @@
     "thermal_paste": {
       "label": "Thermal paste",
       "price": 7,
-      "listings": 135,
+      "listings": 124,
       "updated": "2026-11-25"
     },
     "drive_orig": {
       "label": "Disc drive mechanism (Original)",
-      "price": 26,
-      "listings": 13,
+      "price": 35,
+      "listings": 12,
       "updated": "2026-11-25"
     },
     "drive_slim": {
@@ -114,14 +114,14 @@
     },
     "controller": {
       "label": "Third-party controller",
-      "price": 22,
-      "listings": 98,
+      "price": 23,
+      "listings": 82,
       "updated": "2026-11-25"
     },
     "cables": {
       "label": "Power + HDMI cables",
       "price": 11,
-      "listings": 95,
+      "listings": 102,
       "updated": "2026-11-25"
     },
     "shell_orig": {

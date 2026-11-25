@@ -5,7 +5,7 @@
     "orig_500": {
       "label": "Original 500GB",
       "price": 75,
-      "listings": 66,
+      "listings": 68,
       "updated": "2026-11-25"
     },
     "orig_1tb": {
@@ -17,7 +17,7 @@
     "slim_500": {
       "label": "Slim 500GB",
       "price": 100,
-      "listings": 118,
+      "listings": 119,
       "updated": "2026-11-25"
     },
     "slim_1tb": {
@@ -29,7 +29,7 @@
     "pro_1tb": {
       "label": "Pro 1TB",
       "price": 162,
-      "listings": 108,
+      "listings": 107,
       "updated": "2026-11-25"
     }
   },
@@ -96,38 +96,38 @@
     },
     "drive_orig": {
       "label": "Disc drive mechanism (Original)",
-      "price": 45,
-      "listings": 5,
+      "price": 26,
+      "listings": 13,
       "updated": "2026-11-25"
     },
     "drive_slim": {
       "label": "Disc drive mechanism (Slim)",
-      "price": 22,
-      "listings": null,
-      "updated": null
+      "price": 37,
+      "listings": 7,
+      "updated": "2026-11-25"
     },
     "drive_pro": {
       "label": "Disc drive mechanism (Pro)",
-      "price": 25,
-      "listings": null,
-      "updated": null
+      "price": 37,
+      "listings": 6,
+      "updated": "2026-11-25"
     },
     "controller": {
       "label": "Third-party controller",
       "price": 22,
-      "listings": 99,
+      "listings": 98,
       "updated": "2026-11-25"
     },
     "cables": {
       "label": "Power + HDMI cables",
       "price": 11,
-      "listings": 100,
+      "listings": 95,
       "updated": "2026-11-25"
     },
     "shell_orig": {
       "label": "Shell (Original)",
-      "price": 20,
-      "listings": 6,
+      "price": 25,
+      "listings": 7,
       "updated": "2026-11-25"
     },
     "shell_slim": {

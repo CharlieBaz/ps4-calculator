@@ -35,7 +35,7 @@ eBay postage (`ebay_postage`) and the CeX percentage (`cex_rate_percent`) are un
 
 The page keeps showing the last good prices, so nothing breaks — they just go stale. Check the "last updated" date at the top of the page.
 
-1. On GitHub, open the repo → **Actions** tab → **Update prices**. A red ✗ means a failed run; click it to read the error.
+1. Open `update_log.txt` in the repo: it holds the full output of the last run, including example listings behind each price (handy for spotting junk that got through the filters). Or go to the **Actions** tab → **Update prices**: a red ✗ means a failed run; click it to read the error.
 2. Common causes:
    - **"401" / "invalid_client"**: eBay keys are wrong or expired. Get them again from developer.ebay.com → *Application Keys* (Production), then update them in repo **Settings → Secrets and variables → Actions**.
    - **"KEEP xxx: only 3 usable listings"**: not an error — too few clean listings that day, so that one price stayed put.

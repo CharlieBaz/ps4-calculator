@@ -35,7 +35,8 @@ JUNK = r"faulty|spares|repair|broken|not working|for parts|untested|read desc|no
 # Words that mean a "console" listing is actually just a part or accessory.
 NOT_A_CONSOLE = r"shell|housing|case only|motherboard|\bfan\b|power supply|\bpsu\b|skin|sticker|" \
                 r"stand|charger|controller only|pad only|hdmi port|disc drive|blu.?ray drive|\bdrive only|" \
-                r"cooling|replacement|\bparts?\b"
+                r"cooling|replacement|\bparts?\b|limited edition|special edition|other items|headset|" \
+                r"\b(2|two|3|three)\s?x?\s?(dualshock|controllers?|pads?)|\bx\s?2\b"
 
 USED_CONDITIONS = "conditionIds:{1500|2000|2010|2020|2030|2500|2750|3000|4000|5000|6000}"
 ANY_WORKING = "conditionIds:{1000|1500|2000|2010|2020|2030|2500|2750|3000|4000|5000|6000}"
@@ -63,12 +64,15 @@ def console(query, family, capacity, low, high):
     }
 
 
-def part(query, low, high, require=(), exclude=(), condition=ANY_WORKING):
+OTHER_CONSOLES = r"\bps[1235]\b|playstation\s?[1235]\b|\bxbox\b|nintendo switch"
+
+
+def part(query, low, high, require=(), exclude=(), condition=ANY_WORKING, allow_other_consoles=False):
     return {
         "q": query,
         "filter": condition,
         "require": list(require),
-        "exclude": [JUNK] + list(exclude),
+        "exclude": [JUNK] + ([] if allow_other_consoles else [OTHER_CONSOLES]) + list(exclude),
         "range": (low, high),
         "add_shipping": True,  # you'd pay postage when buying a part
     }
@@ -87,19 +91,21 @@ ITEMS = {
 
     # ---- Parts ----
     "hdd_500": {"group": "parts", "searches": [
-        part("500gb 2.5 sata laptop hard drive", 4, 40, require=[r"500\s?gb", r"2\.5"], exclude=[HDD_JUNK])]},
+        part("500gb 2.5 sata laptop hard drive", 4, 40, require=[r"500\s?gb", r"2\.5"],
+             exclude=[HDD_JUNK, r"\b(80|120|160|250|320|750)\s?gb|\b[1-9]\s?tb"])]},
     "hdd_1tb": {"group": "parts", "searches": [
-        part("1tb 2.5 sata laptop hard drive", 8, 70, require=[r"1\s?tb", r"2\.5"], exclude=[HDD_JUNK])]},
+        part("1tb 2.5 sata laptop hard drive", 8, 70, require=[r"1\s?tb", r"2\.5"],
+             exclude=[HDD_JUNK, r"\b(80|120|160|250|320|500|750)\s?gb|\b[2-9]\s?tb"])]},
 
     "psu_orig": {"group": "parts", "searches": [
         part("ps4 power supply unit", 8, 60, require=[r"\bps4\b|playstation", r"power supply|\bpsu\b|adp-"],
-             exclude=[ORIG_ONLY["exclude"], r"cable|lead|plug|adapter|charger"])]},
+             exclude=[ORIG_ONLY["exclude"], r"cable|lead|plug|adapter|charger|shield"])]},
     "psu_slim": {"group": "parts", "searches": [
         part("ps4 slim power supply unit", 8, 60, require=[SLIM["require"], r"power supply|\bpsu\b|adp-"],
-             exclude=[SLIM["exclude"], r"cable|lead|plug|adapter|charger"])]},
+             exclude=[SLIM["exclude"], r"cable|lead|plug|adapter|charger|shield"])]},
     "psu_pro": {"group": "parts", "searches": [
         part("ps4 pro power supply unit", 10, 80, require=[PRO["require"], r"power supply|\bpsu\b|adp-"],
-             exclude=[PRO["exclude"], r"cable|lead|plug|adapter|charger"])]},
+             exclude=[PRO["exclude"], r"cable|lead|plug|adapter|charger|shield"])]},
 
     "fan_orig": {"group": "parts", "searches": [
         part("ps4 internal cooling fan replacement", 3, 30, require=[r"\bps4\b|playstation", r"\bfan\b"],
@@ -118,13 +124,13 @@ ITEMS = {
     # Slim and Pro use the same drive mechanism (KEM-496), so listings for "Slim/Pro" count for both.
     "drive_orig": {"group": "parts", "searches": [
         part("ps4 blu ray drive", 5, 60, require=[r"\bps4\b|playstation|kem-?490", r"drive|kem-?490|mechanism"],
-             exclude=[ORIG_ONLY["exclude"], r"kem-?496", r"faceplate|gear|motor only|ribbon|cable|screw|\bboard only\b|external|usb|\bcover\b"])]},
+             exclude=[ORIG_ONLY["exclude"], r"kem-?496", r"faceplate|gear|motor only|ribbon|cable|screw|\bboard only\b|external|usb|\bcover\b|roller|hinge|shaft"])]},
     "drive_slim": {"group": "parts", "searches": [
         part("ps4 slim blu ray drive", 5, 60, require=[r"\bslim\b|kem-?496", r"drive|kem-?496|mechanism"],
-             exclude=[r"faceplate|gear|motor only|ribbon|cable|screw|\bboard only\b|external|usb|\bcover\b"])]},
+             exclude=[r"faceplate|gear|motor only|ribbon|cable|screw|\bboard only\b|external|usb|\bcover\b|roller|hinge|shaft"])]},
     "drive_pro": {"group": "parts", "searches": [
         part("ps4 pro blu ray drive", 5, 70, require=[r"\bpro\b|kem-?496", r"drive|kem-?496|mechanism"],
-             exclude=[r"faceplate|gear|motor only|ribbon|cable|screw|\bboard only\b|external|usb|\bcover\b"])]},
+             exclude=[r"faceplate|gear|motor only|ribbon|cable|screw|\bboard only\b|external|usb|\bcover\b|roller|hinge|shaft"])]},
 
     "controller": {"group": "parts", "searches": [
         part("wireless controller for ps4", 6, 40, require=[r"controller|gamepad"],
@@ -134,20 +140,22 @@ ITEMS = {
     # Two searches added together: a figure-8 power lead plus an HDMI cable.
     "cables": {"group": "parts", "searches": [
         part("figure 8 power cable ps4", 1, 15, require=[r"figure|fig|c7|2.?pin"],
-             exclude=[r"hdmi|\blot\b|x\s?[2-9]\b"], condition="conditionIds:{1000}"),
+             exclude=[r"hdmi|\blot\b|x\s?[2-9]\b"], condition="conditionIds:{1000}",
+             allow_other_consoles=True),
         part("hdmi cable 1.5m", 1, 15, require=[r"hdmi"],
-             exclude=[r"adapter|splitter|switch|\blot\b|x\s?[2-9]\b|\bpack\b|10m|15m|20m"], condition="conditionIds:{1000}"),
+             exclude=[r"adapter|splitter|switch|\blot\b|x\s?[2-9]\b|\bpack\b|10m|15m|20m"], condition="conditionIds:{1000}",
+             allow_other_consoles=True),
     ]},
 
     "shell_orig": {"group": "parts", "searches": [
         part("ps4 shell housing", 5, 50, require=[r"\bps4\b|playstation", r"shell|housing|case"],
-             exclude=[ORIG_ONLY["exclude"], r"controller|skin|sticker|dust|bag|stand|faceplate only|screws? only"])]},
+             exclude=[ORIG_ONLY["exclude"], r"controller|skin|sticker|dust|bag|stand|faceplate only|screws? only|cover only|top only|bottom only|panel only"])]},
     "shell_slim": {"group": "parts", "searches": [
         part("ps4 slim shell housing", 5, 50, require=[SLIM["require"], r"shell|housing|case"],
-             exclude=[SLIM["exclude"], r"controller|skin|sticker|dust|bag|stand|faceplate only|screws? only"])]},
+             exclude=[SLIM["exclude"], r"controller|skin|sticker|dust|bag|stand|faceplate only|screws? only|cover only|top only|bottom only|panel only"])]},
     "shell_pro": {"group": "parts", "searches": [
         part("ps4 pro shell housing", 5, 60, require=[PRO["require"], r"shell|housing|case"],
-             exclude=[PRO["exclude"], r"controller|skin|sticker|dust|bag|stand|faceplate only|screws? only"])]},
+             exclude=[PRO["exclude"], r"controller|skin|sticker|dust|bag|stand|faceplate only|screws? only|cover only|top only|bottom only|panel only"])]},
 }
 
 

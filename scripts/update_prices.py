@@ -29,13 +29,13 @@ SEARCH_URL = "https://api.ebay.com/buy/browse/v1/item_summary/search"
 MIN_LISTINGS = 5
 
 # Words that mean a listing is broken, not the real thing, or not comparable.
-JUNK = r"faulty|spares|repair|broken|not working|for parts|untested|read desc|no power|" \
+JUNK = r"\bfault|caution|spares|repair|broken|not working|for parts|untested|read desc|no power|" \
        r"box only|empty box|job lot|joblot|wholesale|\bbundle\b|\bgames?\b|\bvr\b|cracked|damaged"
 
 # Words that mean a "console" listing is actually just a part or accessory.
 NOT_A_CONSOLE = r"shell|housing|case only|motherboard|\bfan\b|power supply|\bpsu\b|skin|sticker|" \
                 r"stand|charger|controller only|pad only|hdmi port|disc drive|blu.?ray drive|\bdrive only|" \
-                r"cooling|replacement|\bparts?\b|limited edition|special edition|other items|headset|" \
+                r"cooling|replacement|\bparts?\b|\bedition\b|other items|headset|" \
                 r"\b(2|two|3|three)\s?x?\s?(dualshock|controllers?|pads?)|\bx\s?2\b"
 
 USED_CONDITIONS = "conditionIds:{1500|2000|2010|2020|2030|2500|2750|3000|4000|5000|6000}"
@@ -99,13 +99,13 @@ ITEMS = {
 
     "psu_orig": {"group": "parts", "searches": [
         part("ps4 power supply unit", 8, 60, require=[r"\bps4\b|playstation", r"power supply|\bpsu\b|adp-"],
-             exclude=[ORIG_ONLY["exclude"], r"cable|lead|plug|adapter|charger|shield"])]},
+             exclude=[ORIG_ONLY["exclude"], r"cable|lead|plug|adapter|charger|shield|motherboard"])]},
     "psu_slim": {"group": "parts", "searches": [
         part("ps4 slim power supply unit", 8, 60, require=[SLIM["require"], r"power supply|\bpsu\b|adp-"],
-             exclude=[SLIM["exclude"], r"cable|lead|plug|adapter|charger|shield"])]},
+             exclude=[SLIM["exclude"], r"cable|lead|plug|adapter|charger|shield|motherboard"])]},
     "psu_pro": {"group": "parts", "searches": [
         part("ps4 pro power supply unit", 10, 80, require=[PRO["require"], r"power supply|\bpsu\b|adp-"],
-             exclude=[PRO["exclude"], r"cable|lead|plug|adapter|charger|shield"])]},
+             exclude=[PRO["exclude"], r"cable|lead|plug|adapter|charger|shield|motherboard"])]},
 
     "fan_orig": {"group": "parts", "searches": [
         part("ps4 internal cooling fan replacement", 3, 30, require=[r"\bps4\b|playstation", r"\bfan\b"],
@@ -134,7 +134,7 @@ ITEMS = {
 
     "controller": {"group": "parts", "searches": [
         part("wireless controller for ps4", 6, 40, require=[r"controller|gamepad"],
-             exclude=[r"sony|official|genuine|charging|charger|skin|grip|thumb|stand|case|\bparts?\b|shell"],
+             exclude=[r"sony|official|genuine|charging|charger|battery|cable|skin|grip|thumb|stand|case|\bparts?\b|shell"],
              condition="conditionIds:{1000}")]},
 
     # Two searches added together: a figure-8 power lead plus an HDMI cable.

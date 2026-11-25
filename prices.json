@@ -10,8 +10,8 @@
     },
     "orig_1tb": {
       "label": "Original 1TB",
-      "price": 105,
-      "listings": 33,
+      "price": 102,
+      "listings": 30,
       "updated": "2026-11-25"
     },
     "slim_500": {
@@ -22,14 +22,14 @@
     },
     "slim_1tb": {
       "label": "Slim 1TB",
-      "price": 144,
-      "listings": 76,
+      "price": 141,
+      "listings": 73,
       "updated": "2026-11-25"
     },
     "pro_1tb": {
       "label": "Pro 1TB",
       "price": 157,
-      "listings": 95,
+      "listings": 83,
       "updated": "2026-11-25"
     }
   },
@@ -37,13 +37,13 @@
     "hdd_500": {
       "label": "2.5\" 500GB hard drive",
       "price": 16,
-      "listings": 152,
+      "listings": 150,
       "updated": "2026-11-25"
     },
     "hdd_1tb": {
       "label": "2.5\" 1TB hard drive",
       "price": 30,
-      "listings": 123,
+      "listings": 122,
       "updated": "2026-11-25"
     },
     "firmware": {
@@ -60,8 +60,8 @@
     },
     "psu_slim": {
       "label": "Power supply (Slim)",
-      "price": 37,
-      "listings": 18,
+      "price": 39,
+      "listings": 16,
       "updated": "2026-11-25"
     },
     "psu_pro": {
@@ -91,7 +91,7 @@
     "thermal_paste": {
       "label": "Thermal paste",
       "price": 7,
-      "listings": 124,
+      "listings": 125,
       "updated": "2026-11-25"
     },
     "drive_orig": {
@@ -115,13 +115,13 @@
     "controller": {
       "label": "Third-party controller",
       "price": 23,
-      "listings": 82,
+      "listings": 78,
       "updated": "2026-11-25"
     },
     "cables": {
       "label": "Power + HDMI cables",
       "price": 11,
-      "listings": 102,
+      "listings": 98,
       "updated": "2026-11-25"
     },
     "shell_orig": {

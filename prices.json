@@ -1,32 +1,147 @@
 {
-  "last_updated": null,
-  "source": "Starting estimates (not yet updated from eBay)",
+  "last_updated": "2026-11-25",
+  "source": "eBay UK Browse API (median asking prices)",
   "consoles": {
-    "orig_500": { "label": "Original 500GB", "price": 70, "listings": null, "updated": null },
-    "orig_1tb": { "label": "Original 1TB", "price": 80, "listings": null, "updated": null },
-    "slim_500": { "label": "Slim 500GB", "price": 90, "listings": null, "updated": null },
-    "slim_1tb": { "label": "Slim 1TB", "price": 105, "listings": null, "updated": null },
-    "pro_1tb": { "label": "Pro 1TB", "price": 150, "listings": null, "updated": null }
+    "orig_500": {
+      "label": "Original 500GB",
+      "price": 75,
+      "listings": 66,
+      "updated": "2026-11-25"
+    },
+    "orig_1tb": {
+      "label": "Original 1TB",
+      "price": 105,
+      "listings": 41,
+      "updated": "2026-11-25"
+    },
+    "slim_500": {
+      "label": "Slim 500GB",
+      "price": 100,
+      "listings": 118,
+      "updated": "2026-11-25"
+    },
+    "slim_1tb": {
+      "label": "Slim 1TB",
+      "price": 141,
+      "listings": 86,
+      "updated": "2026-11-25"
+    },
+    "pro_1tb": {
+      "label": "Pro 1TB",
+      "price": 162,
+      "listings": 108,
+      "updated": "2026-11-25"
+    }
   },
   "parts": {
-    "hdd_500": { "label": "2.5\" 500GB hard drive", "price": 12, "listings": null, "updated": null },
-    "hdd_1tb": { "label": "2.5\" 1TB hard drive", "price": 25, "listings": null, "updated": null },
-    "firmware": { "label": "Firmware reinstall (free download)", "price": 0, "listings": null, "updated": null },
-    "psu_orig": { "label": "Power supply (Original)", "price": 20, "listings": null, "updated": null },
-    "psu_slim": { "label": "Power supply (Slim)", "price": 18, "listings": null, "updated": null },
-    "psu_pro": { "label": "Power supply (Pro)", "price": 28, "listings": null, "updated": null },
-    "fan_orig": { "label": "Fan (Original)", "price": 9, "listings": null, "updated": null },
-    "fan_slim": { "label": "Fan (Slim)", "price": 9, "listings": null, "updated": null },
-    "fan_pro": { "label": "Fan (Pro)", "price": 12, "listings": null, "updated": null },
-    "thermal_paste": { "label": "Thermal paste", "price": 6, "listings": null, "updated": null },
-    "drive_orig": { "label": "Disc drive mechanism (Original)", "price": 20, "listings": null, "updated": null },
-    "drive_slim": { "label": "Disc drive mechanism (Slim)", "price": 22, "listings": null, "updated": null },
-    "drive_pro": { "label": "Disc drive mechanism (Pro)", "price": 25, "listings": null, "updated": null },
-    "controller": { "label": "Third-party controller", "price": 15, "listings": null, "updated": null },
-    "cables": { "label": "Power + HDMI cables", "price": 7, "listings": null, "updated": null },
-    "shell_orig": { "label": "Shell (Original)", "price": 15, "listings": null, "updated": null },
-    "shell_slim": { "label": "Shell (Slim)", "price": 18, "listings": null, "updated": null },
-    "shell_pro": { "label": "Shell (Pro)", "price": 25, "listings": null, "updated": null }
+    "hdd_500": {
+      "label": "2.5\" 500GB hard drive",
+      "price": 17,
+      "listings": 165,
+      "updated": "2026-11-25"
+    },
+    "hdd_1tb": {
+      "label": "2.5\" 1TB hard drive",
+      "price": 30,
+      "listings": 145,
+      "updated": "2026-11-25"
+    },
+    "firmware": {
+      "label": "Firmware reinstall (free download)",
+      "price": 0,
+      "listings": null,
+      "updated": null
+    },
+    "psu_orig": {
+      "label": "Power supply (Original)",
+      "price": 32,
+      "listings": 45,
+      "updated": "2026-11-25"
+    },
+    "psu_slim": {
+      "label": "Power supply (Slim)",
+      "price": 38,
+      "listings": 21,
+      "updated": "2026-11-25"
+    },
+    "psu_pro": {
+      "label": "Power supply (Pro)",
+      "price": 43,
+      "listings": 10,
+      "updated": "2026-11-25"
+    },
+    "fan_orig": {
+      "label": "Fan (Original)",
+      "price": 15,
+      "listings": 24,
+      "updated": "2026-11-25"
+    },
+    "fan_slim": {
+      "label": "Fan (Slim)",
+      "price": 14,
+      "listings": 18,
+      "updated": "2026-11-25"
+    },
+    "fan_pro": {
+      "label": "Fan (Pro)",
+      "price": 12,
+      "listings": 20,
+      "updated": "2026-11-25"
+    },
+    "thermal_paste": {
+      "label": "Thermal paste",
+      "price": 7,
+      "listings": 135,
+      "updated": "2026-11-25"
+    },
+    "drive_orig": {
+      "label": "Disc drive mechanism (Original)",
+      "price": 45,
+      "listings": 5,
+      "updated": "2026-11-25"
+    },
+    "drive_slim": {
+      "label": "Disc drive mechanism (Slim)",
+      "price": 22,
+      "listings": null,
+      "updated": null
+    },
+    "drive_pro": {
+      "label": "Disc drive mechanism (Pro)",
+      "price": 25,
+      "listings": null,
+      "updated": null
+    },
+    "controller": {
+      "label": "Third-party controller",
+      "price": 22,
+      "listings": 99,
+      "updated": "2026-11-25"
+    },
+    "cables": {
+      "label": "Power + HDMI cables",
+      "price": 11,
+      "listings": 100,
+      "updated": "2026-11-25"
+    },
+    "shell_orig": {
+      "label": "Shell (Original)",
+      "price": 20,
+      "listings": 6,
+      "updated": "2026-11-25"
+    },
+    "shell_slim": {
+      "label": "Shell (Slim)",
+      "price": 18,
+      "listings": 9,
+      "updated": "2026-11-25"
+    },
+    "shell_pro": {
+      "label": "Shell (Pro)",
+      "price": 25,
+      "listings": null,
+      "updated": null
+    }
   },
   "settings": {
     "ebay_postage": 10,

@@ -1,50 +1,50 @@
 {
-  "last_updated": "2026-11-26",
+  "last_updated": "2026-11-27",
   "source": "eBay UK Browse API (median asking prices)",
   "consoles": {
     "orig_500": {
       "label": "Original 500GB",
       "price": 75,
-      "listings": 63,
-      "updated": "2026-11-26"
+      "listings": 64,
+      "updated": "2026-11-27"
     },
     "orig_1tb": {
       "label": "Original 1TB",
-      "price": 95,
-      "listings": 28,
-      "updated": "2026-11-26"
+      "price": 97,
+      "listings": 27,
+      "updated": "2026-11-27"
     },
     "slim_500": {
       "label": "Slim 500GB",
       "price": 100,
-      "listings": 112,
-      "updated": "2026-11-26"
+      "listings": 106,
+      "updated": "2026-11-27"
     },
     "slim_1tb": {
       "label": "Slim 1TB",
-      "price": 144,
-      "listings": 78,
-      "updated": "2026-11-26"
+      "price": 146,
+      "listings": 73,
+      "updated": "2026-11-27"
     },
     "pro_1tb": {
       "label": "Pro 1TB",
       "price": 157,
-      "listings": 78,
-      "updated": "2026-11-26"
+      "listings": 76,
+      "updated": "2026-11-27"
     }
   },
   "parts": {
     "hdd_500": {
       "label": "2.5\" 500GB hard drive",
-      "price": 17,
-      "listings": 156,
-      "updated": "2026-11-26"
+      "price": 16,
+      "listings": 155,
+      "updated": "2026-11-27"
     },
     "hdd_1tb": {
       "label": "2.5\" 1TB hard drive",
-      "price": 34,
-      "listings": 125,
-      "updated": "2026-11-26"
+      "price": 35,
+      "listings": 120,
+      "updated": "2026-11-27"
     },
     "firmware": {
       "label": "Firmware reinstall (free download)",
@@ -56,79 +56,79 @@
       "label": "Power supply (Original)",
       "price": 32,
       "listings": 42,
-      "updated": "2026-11-26"
+      "updated": "2026-11-27"
     },
     "psu_slim": {
       "label": "Power supply (Slim)",
-      "price": 39,
-      "listings": 16,
-      "updated": "2026-11-26"
+      "price": 38,
+      "listings": 17,
+      "updated": "2026-11-27"
     },
     "psu_pro": {
       "label": "Power supply (Pro)",
       "price": 43,
       "listings": 10,
-      "updated": "2026-11-26"
+      "updated": "2026-11-27"
     },
     "fan_orig": {
       "label": "Fan (Original)",
-      "price": 15,
-      "listings": 20,
-      "updated": "2026-11-26"
+      "price": 14,
+      "listings": 24,
+      "updated": "2026-11-27"
     },
     "fan_slim": {
       "label": "Fan (Slim)",
-      "price": 14,
-      "listings": 18,
-      "updated": "2026-11-26"
+      "price": 13,
+      "listings": 17,
+      "updated": "2026-11-27"
     },
     "fan_pro": {
       "label": "Fan (Pro)",
       "price": 11,
       "listings": 21,
-      "updated": "2026-11-26"
+      "updated": "2026-11-27"
     },
     "thermal_paste": {
       "label": "Thermal paste",
-      "price": 7,
-      "listings": 122,
-      "updated": "2026-11-26"
+      "price": 6,
+      "listings": 116,
+      "updated": "2026-11-27"
     },
     "drive_orig": {
       "label": "Disc drive mechanism (Original)",
-      "price": 35,
-      "listings": 12,
-      "updated": "2026-11-26"
+      "price": 26,
+      "listings": 11,
+      "updated": "2026-11-27"
     },
     "drive_slim": {
       "label": "Disc drive mechanism (Slim)",
       "price": 33,
       "listings": 6,
-      "updated": "2026-11-26"
+      "updated": "2026-11-27"
     },
     "drive_pro": {
       "label": "Disc drive mechanism (Pro)",
       "price": 37,
       "listings": 6,
-      "updated": "2026-11-26"
+      "updated": "2026-11-27"
     },
     "controller": {
       "label": "Third-party controller",
-      "price": 23,
-      "listings": 86,
-      "updated": "2026-11-26"
+      "price": 22,
+      "listings": 83,
+      "updated": "2026-11-27"
     },
     "cables": {
       "label": "Power + HDMI cables",
       "price": 11,
-      "listings": 106,
-      "updated": "2026-11-26"
+      "listings": 109,
+      "updated": "2026-11-27"
     },
     "shell_orig": {
       "label": "Shell (Original)",
       "price": 27,
       "listings": 6,
-      "updated": "2026-11-26"
+      "updated": "2026-11-27"
     },
     "shell_slim": {
       "label": "Shell (Slim)",

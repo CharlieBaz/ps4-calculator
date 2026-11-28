@@ -1,35 +1,35 @@
-OK   orig_500: £75 from 64 listings
-       £ 52.70  Sony PlayStation 4 PS4 500GB CUH-1216B Console Only
-       £ 75.00  Sony PlayStation 4 PS4 Black Console with DualShock 4 Controller 500gb
-       £119.99  Sony PlayStation 4 Console 500GB White CUH-1216A + Controller & BioShock
-OK   orig_1tb: £97 from 27 listings
+OK   orig_500: £79 from 57 listings
+       £ 49.99  Sony PS4 500GB Playstation 4 CUH-1003A **CONSOLE ONLY** *READ*
+       £ 78.70  Sony PlayStation 4 PS4 Console - Black, 500GB, Wi-Fi, Power Cable
+       £120.00  Sony PlayStation 4 500GB PS4 Console - 1116A Refurbished 12 Months W. GC
+OK   orig_1tb: £102 from 26 listings
        £ 70.00  Sony PlayStation 4 1TB CUH-1116B - Console Only
-       £ 97.00  Sony PlayStation 4 PS4 1TB Black Console + Red Controller + Cables
+       £104.70  Sony PS4 Console Only 1 TB - Fw Version 10.01  - Tested & Working - 1 Terrabyte
        £146.29  Sony PlayStation 4 1TB Console, 1 Controller Call Of Duty Black Ops III Boxed
-OK   slim_500: £100 from 106 listings
+OK   slim_500: £100 from 104 listings
        £ 76.95  Sony PS4 Slim 500GB Console Third-Party Controller & Cables - Casing Damage
-       £ 99.99  Sony PS4 Slim 500GB Console Only - Firmware 8.03 – Low Firmware
+       £ 99.99  Sony  Playstation 4 (PS4) Slim 500GB - Console Only – Low Firmware (9.00)
        £150.00  Sony PlayStation 4 Slim 500GB Console - Black
-OK   slim_1tb: £146 from 73 listings
+OK   slim_1tb: £141 from 73 listings
        £ 82.86  Sony PlayStation 4 Slim 1TB Black Console DualShock 4 Controller Not Original
-       £146.30  PS4 Slim 1TB Console Black
+       £141.10  Sony PlayStation 4 Slim Black 1TB Console with Controller and Cables
        £239.90  Sony PlayStation 4 Slim 1 TB Black Console
-OK   pro_1tb: £157 from 76 listings
+OK   pro_1tb: £157 from 77 listings
        £104.70  Sony PS4 PRO 1TB Console - Black
        £156.70  Sony PS4 PRO 1TB Console - Black
-       £260.70  Sony PS4 Pro PlayStation 4 1TB Console Black 4K UHD PAL HDMI CUH-7016B
-OK   hdd_500: £16 from 155 listings
+       £240.00  Playstation 4 PRO console 1TB SPIDERMAN BUNLDE BOXED PS4
+OK   hdd_500: £16 from 154 listings
        £  8.17  Seagate - 500GB - 2.5" Internal Thin Hard Drive for Laptop  (ST500LM021)
-       £ 15.99  500GB 2.5in SATA HDD 7mm 80-89% Health Laptop Hard Drive
+       £ 15.99  Mixed Brand 500GB 2.5" Laptop Hard Drive SATA HDD w/ UEFI - WINDOWS 10 LOADED
        £ 38.11  Toshiba MQ01ACF050 500GB 7200RPM 2.5" 7mm SATA Laptop Hard Drive - NEW
-OK   hdd_1tb: £35 from 120 listings
-       £ 19.09  1TB HDD Samsung Spinpoint ST1000LM024 HN-M101MBB 2.5” SATA Laptop Hard Drive
-       £ 34.83  Seagate ST1000LM035 Hard Drive 1TB 2.5" SATA Laptop HDD Windows 11 UEFI x64
+OK   hdd_1tb: £35 from 117 listings
+       £ 20.89  Dell Constellation ST91000640NS 1TB 2.5" Hard Drive HDD
+       £ 34.83  Toshiba 1TB Hard Disk Drive 2.5" SATA Laptop HDD Windows 10 UEFI x64
        £ 62.94  Western Digital Blue 1TB SATA 2.5" Laptop Hard drive HDD 5400 RPM.
-OK   psu_orig: £32 from 42 listings
+OK   psu_orig: £32 from 39 listings
        £ 13.42  Bell System 13.8V 4A PS4 Power Supply Unit
-       £ 31.95  PlayStation 4 PS4 Replacement Power Supply Unit 5 Pin PSU CUH-1000 / ADP-240AR
-       £ 49.79  ADP‑240AR 5Pin Unit Power Supply Source Replacement For PlayStation4 Gam Set.
+       £ 31.95  PlayStation 4 PS4 Replacement Power Supply Unit 4 Pin PSU CUH-1100 / ADP-240CR
+       £ 49.48  SONY PLAYSTATION PS4 PSU POWER SUPPLY  UNIT ADP-240AR - FREE UK SHIPPING
 OK   psu_slim: £38 from 17 listings
        £ 26.00  Sony PlayStation 4 Slim ADP-160ER Power Supply Unit
        £ 37.99  Power Supply Unit For Sony PS4 Slim PlayStation 4 ADP-160AR Replacement PSU UKO
@@ -38,10 +38,10 @@ OK   psu_pro: £43 from 10 listings
        £ 26.52  For PS4 Pro Power Supply ADP-300CR CUH-7015B, For PS4 Pro
        £ 43.16  ps4 Pro 1TB Genuine Power supply - Used but test and working perfectly.
        £ 53.81  Replacement Power Supply Unit For PS4 Pro ADP-300ER CUH-7116 7115 N15-300P1A, Fo
-OK   fan_orig: £14 from 24 listings
+OK   fan_orig: £13 from 23 listings
        £  7.00  Internal Cooling Fan for Sony PlayStation 4 PS4 Console Replacement CUH-1200
-       £ 13.95  CPU Cooling Fan Parts For Sony Playstation 4 Internal PS 4 GPU Cooler Case PS4
-       £ 21.99  Replacement Cooling Fan for Sony PS4 1000/1100 Series Built-In, No Tools Needed
+       £ 13.05  Internal Cooling Fan For Sony PS4 PlayStation 4 Console Replacement CUH-1200 OEM
+       £ 21.99  Internal Cooling Fan For Sony PS4 PlayStation 4 Console Replacement CUH-1200 OEM
 OK   fan_slim: £13 from 17 listings
        £  5.99  For Sony PlayStation4  PS4 slim Replacement Internal Cooling Fan - fast Dispatch
        £ 13.49  Cooling Fan for PS4 Slim  CUH-2xxx
@@ -50,10 +50,10 @@ OK   fan_pro: £11 from 21 listings
        £ 10.11  For Playstation 4 PS4 Pro CUH-7016B 7116B 7216B CPU Cooling Fan Replacement
        £ 10.79  PS4 pro Original Internal Cooling Fan for CUH-71xx Genuine Sony PlayStation 4
        £ 27.31  Original Inner Cooling Fan CUH-7000 7XXX for PS4 Pro, For PS4 Pro
-OK   thermal_paste: £6 from 116 listings
-       £  2.89  ARCTIC MX-4 4g Thermal Paste Compound CPU GPU Heatsink Cooling NEW Box Sealed UK
-       £  6.54  Arctic MX-4 Thermal Compound Thermal Paste 4g
-       £ 14.99  ARCTIC MX-4 4g Thermal Paste Heatsink Cooling Compound CPU GPU Sealed NEW Box
+OK   thermal_paste: £7 from 118 listings
+       £  3.09  ARCTIC MX-4 Thermal Paste 4g CPU GPU Compound Heatsink Cooling Grease Box Sealed
+       £  6.94  ARCTIC MX-4 (Incl. Spatula, 4 G) - Premium Performance Thermal Paste
+       £ 15.99  ARCTIC MX-4 (4 g) - Premium Performance Thermal Paste for all processors (CPU
 OK   drive_orig: £26 from 11 listings
        £ 12.59  For Sony PlayStation PS4 Replacement KES-860AAA Blu-ray Disk Drive Reader
        £ 25.50  Laser Lens Module For Sony PS4 PlayStation 4 KEM-490A Replacement Blu Ray Drive
@@ -66,21 +66,21 @@ OK   drive_pro: £37 from 6 listings
        £ 30.08  For PS4 Pro CUH-71xx/72xx Complete Blu-ray Disc Drive Assembly Replacement
        £ 37.09  Sony PlayStation 4 PS4 Pro - Blu-ray Disc Drive - CUH-72**B & CUH-71*B
        £ 59.95  PS4 Pro Optical BluRay Disc Drive Replacement KEM-496AAA KES-496A CUH-72XX/75XX
-OK   controller: £22 from 83 listings
-       £ 10.99  Mini Bluetooth Wireless Gaming Controller Gamepad iPhone Android Switch PC PS4
-       £ 22.40  Wireless PS4 Controller RGB Crack Design 1000mAh Type-C 6-Axis + Jack, NEW
+OK   controller: £23 from 82 listings
+       £ 13.06  SADES SK700 Wireless PS4 Controller Turbo Button Black/Blue for Console 1 Player
+       £ 23.76  ACE GAMER Wireless Galaxy Controller for PS4/Pro/Slim 3.5mm Jack Vibration
        £ 38.99  Compatible With PS4 Controller Wireless Controller For P-4/Pro/Slim Bluetooth
-OK   cables: £11 from 109 listings
-       £  1.69  UK FIGURE 8 POWER CABLE C7 LEAD 2 PIN TV PS5 PS4 XBOX LAPTOP MAINS 1M–10M
-       £  5.44  Figure 8 Mains Power Lead IEC C7 Cable PS5 PS4 PS3 XBOX ONE Radio SKY TV CD DVD
-       £ 13.09  Mcbazel Power Cable for PS5/PS4/PS3, UK Figure-8 Replacement 200mm, Black
-       £  2.08  LOWMAX High Speed HDMI Cable 1m Black HDMI Standard Male to Male
-       £  5.62  Slim HDMI 2.1 Cable PC/Laptop to TV Monitor HDR 8K/60 4K/120 48Gbps 1m/2m/3m/5m
-       £ 14.99  Certified HDMI 2.1 Cable Ultra High Speed 48Gbps Supports 8K 60Hz 4K 120Hz
-OK   shell_orig: £27 from 6 listings
+OK   cables: £12 from 108 listings
+       £  1.00  Figure 8 Mains Power Lead IEC C7 Cable PS5 PS4 PS3 XBOX ONE Radio SKY TV CD DVD
+       £  6.00  Figure 8 Mains Power Lead IEC C7 Cable PS5 PS4 PS3 XBOX ONE Radio SKY TV CD DVD
+       £ 12.35  Mcbazel Power Cable for PS5/PS4/PS3, UK Figure-8 Replacement 180mm, 180mm
+       £  1.00  HDMI Cable 2.2 Compatible Cable 16K 8K 4K HDMI For HDTV PS5 PS4 PC Extender Cord
+       £  5.53  PREMIUM 4k HDMI CABLE 2.1 48Gbps High Speed HDMI Braided Cord-4K@120Hz UK
+       £ 14.99  Premium 4K HDMI Cables - All Lengths Available - 4K 60Hz Ready Gold Bulk Deals
+OK   shell_orig: £30 from 5 listings
        £ 15.64  Sony PS4 - Shell Casing Housing Middle Inner Frame for CUH-11**A & B Models
        £ 29.99  PS4 HDD Hard Drive Cover Faceplate – Replacement Case Housing Shell
        £ 34.99  Sony PS4 - Call of Duty Black Ops 3 - Complete Shell Casing Housing - CUH-12xxx
-KEEP shell_slim: only 3 usable listings for 'ps4 slim shell housing' (staying at £18)
+KEEP shell_slim: only 4 usable listings for 'ps4 slim shell housing' (staying at £18)
 KEEP shell_pro: only 3 usable listings for 'ps4 pro shell housing' (staying at £25)
 Updated 20 of 22 prices.

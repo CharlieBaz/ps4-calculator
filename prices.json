@@ -1,50 +1,50 @@
 {
-  "last_updated": "2026-11-27",
+  "last_updated": "2026-11-28",
   "source": "eBay UK Browse API (median asking prices)",
   "consoles": {
     "orig_500": {
       "label": "Original 500GB",
-      "price": 75,
-      "listings": 64,
-      "updated": "2026-11-27"
+      "price": 79,
+      "listings": 57,
+      "updated": "2026-11-28"
     },
     "orig_1tb": {
       "label": "Original 1TB",
-      "price": 97,
-      "listings": 27,
-      "updated": "2026-11-27"
+      "price": 102,
+      "listings": 26,
+      "updated": "2026-11-28"
     },
     "slim_500": {
       "label": "Slim 500GB",
       "price": 100,
-      "listings": 106,
-      "updated": "2026-11-27"
+      "listings": 104,
+      "updated": "2026-11-28"
     },
     "slim_1tb": {
       "label": "Slim 1TB",
-      "price": 146,
+      "price": 141,
       "listings": 73,
-      "updated": "2026-11-27"
+      "updated": "2026-11-28"
     },
     "pro_1tb": {
       "label": "Pro 1TB",
       "price": 157,
-      "listings": 76,
-      "updated": "2026-11-27"
+      "listings": 77,
+      "updated": "2026-11-28"
     }
   },
   "parts": {
     "hdd_500": {
       "label": "2.5\" 500GB hard drive",
       "price": 16,
-      "listings": 155,
-      "updated": "2026-11-27"
+      "listings": 154,
+      "updated": "2026-11-28"
     },
     "hdd_1tb": {
       "label": "2.5\" 1TB hard drive",
       "price": 35,
-      "listings": 120,
-      "updated": "2026-11-27"
+      "listings": 117,
+      "updated": "2026-11-28"
     },
     "firmware": {
       "label": "Firmware reinstall (free download)",
@@ -55,80 +55,80 @@
     "psu_orig": {
       "label": "Power supply (Original)",
       "price": 32,
-      "listings": 42,
-      "updated": "2026-11-27"
+      "listings": 39,
+      "updated": "2026-11-28"
     },
     "psu_slim": {
       "label": "Power supply (Slim)",
       "price": 38,
       "listings": 17,
-      "updated": "2026-11-27"
+      "updated": "2026-11-28"
     },
     "psu_pro": {
       "label": "Power supply (Pro)",
       "price": 43,
       "listings": 10,
-      "updated": "2026-11-27"
+      "updated": "2026-11-28"
     },
     "fan_orig": {
       "label": "Fan (Original)",
-      "price": 14,
-      "listings": 24,
-      "updated": "2026-11-27"
+      "price": 13,
+      "listings": 23,
+      "updated": "2026-11-28"
     },
     "fan_slim": {
       "label": "Fan (Slim)",
       "price": 13,
       "listings": 17,
-      "updated": "2026-11-27"
+      "updated": "2026-11-28"
     },
     "fan_pro": {
       "label": "Fan (Pro)",
       "price": 11,
       "listings": 21,
-      "updated": "2026-11-27"
+      "updated": "2026-11-28"
     },
     "thermal_paste": {
       "label": "Thermal paste",
-      "price": 6,
-      "listings": 116,
-      "updated": "2026-11-27"
+      "price": 7,
+      "listings": 118,
+      "updated": "2026-11-28"
     },
     "drive_orig": {
       "label": "Disc drive mechanism (Original)",
       "price": 26,
       "listings": 11,
-      "updated": "2026-11-27"
+      "updated": "2026-11-28"
     },
     "drive_slim": {
       "label": "Disc drive mechanism (Slim)",
       "price": 33,
       "listings": 6,
-      "updated": "2026-11-27"
+      "updated": "2026-11-28"
     },
     "drive_pro": {
       "label": "Disc drive mechanism (Pro)",
       "price": 37,
       "listings": 6,
-      "updated": "2026-11-27"
+      "updated": "2026-11-28"
     },
     "controller": {
       "label": "Third-party controller",
-      "price": 22,
-      "listings": 83,
-      "updated": "2026-11-27"
+      "price": 23,
+      "listings": 82,
+      "updated": "2026-11-28"
     },
     "cables": {
       "label": "Power + HDMI cables",
-      "price": 11,
-      "listings": 109,
-      "updated": "2026-11-27"
+      "price": 12,
+      "listings": 108,
+      "updated": "2026-11-28"
     },
     "shell_orig": {
       "label": "Shell (Original)",
-      "price": 27,
-      "listings": 6,
-      "updated": "2026-11-27"
+      "price": 30,
+      "listings": 5,
+      "updated": "2026-11-28"
     },
     "shell_slim": {
       "label": "Shell (Slim)",
